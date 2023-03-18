@@ -96,6 +96,64 @@ body main .home a:hover {
   box-shadow: 3px 1px 10px #202124;
   transition: all 0.3s ease-in-out;
 }
+body main .comments {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+  margin: 15px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 15px;
+}
+body main .comments form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body main .comments form input[type=text] {
+  border: none;
+  border-bottom: 1px solid #202124;
+  background-color: #ECEAE4;
+  outline: none;
+  padding: 3px;
+  transition: all 0.3s ease-in-out;
+}
+body main .comments form input[type=text]:focus {
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  border-bottom: 2px solid #55CBCD;
+}
+body main .comments form textarea {
+  border: none;
+  border-bottom: 1px solid #202124;
+  background-color: #ECEAE4;
+  outline: none;
+  padding: 3px;
+  resize: none;
+  transition: all 0.3s ease-in-out;
+}
+body main .comments form textarea:focus {
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  border-bottom: 2px solid #55CBCD;
+}
+body main .comments form input[type=submit] {
+  background-color: #55CBCD;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 10px;
+  margin: 0;
+  font-weight: 400;
+  width: 50%;
+  align-self: center;
+  transition: all 0.3s ease-in-out;
+}
+body main .comments form input[type=submit]:hover {
+  color: #55CBCD;
+  background-color: #202124;
+  cursor: pointer;
+  box-shadow: 3px 1px 10px #202124;
+  transition: all 0.3s ease-in-out;
+}
 body footer {
   display: flex;
   align-items: center;

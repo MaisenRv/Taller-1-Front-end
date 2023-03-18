@@ -28,3 +28,11 @@
     margin: $margin;
     font-weight: 400;
 }
+
+@mixin styleInput(){
+    border: none;
+    border-bottom: 1px solid $font-color;
+    background-color: $bg-color;
+    outline: none;
+    padding: 3px;
+}
