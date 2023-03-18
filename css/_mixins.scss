@@ -1,0 +1,30 @@
+@mixin styleText($color, $size, $weight){
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin styleBox($margin, $padding, $bg-color,$border,$radiusBorder){
+    margin: $margin;
+    padding: $padding;
+    background-color: $bg-color;
+    border: $border;
+    border-radius: $radiusBorder;
+}
+
+@mixin hoverEffect($color,$bg-color,$cursor){
+    color: $color;
+    background-color: $bg-color;
+    cursor: $cursor;
+    box-shadow: 3px 1px 10px $bg-color;
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin styleButton($padding,$margin){
+    background-color: $primary-color;
+    border: none;
+    border-radius: 7px;
+    padding: $padding;
+    margin: $margin;
+    font-weight: 400;
+}

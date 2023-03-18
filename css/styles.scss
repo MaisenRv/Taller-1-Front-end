@@ -1,0 +1,86 @@
+@import "variables";
+@import "mixins";
+
+*{
+    font-family: $font-family;
+    
+}
+
+body{
+    background-color: $bg-color;
+    margin: 0;
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $primary-color;
+        padding: 5px;
+        h1{
+            @include styleText($font-color,x-large,500);
+            margin: 10px;
+        }
+        nav{
+            margin: 10px;
+            ul{
+                display: flex;
+                justify-content: flex-end;
+                gap: 20px;
+                li{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        @include styleText($font-color, medium, 300);
+                        @include styleBox(0,5px 8px,transparent,none, 10px);
+                        transition: all 0.3s ease-in-out;
+                        &:hover{
+                            @include hoverEffect($primary-color,$font-color,pointer);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main{
+        display: flex;
+        justify-content: center;
+        .home{
+            @include styleBox(15px,20px,$secondary-bg-color,none,15px);
+            width: 50%;
+            box-sizing: border-box;
+            box-shadow: 1px 1px 8px $shadow-color;
+            h2{
+                margin: 0;
+                @include styleText($font-color,x-large,500);
+            }
+            p{
+                @include styleText($font-color,medium,300);
+            }
+            a{
+                @include styleButton(8px 10px,0);
+                @include styleText($font-color,15px,400);
+                transition: all 0.3s ease-in-out;
+                text-decoration: none;
+                box-sizing: border-box;
+                &:hover{
+                    @include hoverEffect($primary-color,$font-color,pointer)
+                }
+            }
+        }
+    }
+
+
+    footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+        width: 100%;
+        height: 30px;
+        @include styleText($font-color,13px,400);
+        margin-bottom: 0;
+        padding: 0 10px;
+        position: fixed;
+        bottom: 0;
+    }
+}
