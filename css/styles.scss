@@ -33,7 +33,7 @@ body{
                         @include styleBox(0,5px 8px,transparent,none, 10px);
                         transition: all 0.3s ease-in-out;
                         &:hover{
-                            @include hoverEffect($primary-color,$font-color,pointer);
+                            @include hoverEffect($primary-color,$font-color,pointer,$font-color);
                         }
                     }
                 }
@@ -63,8 +63,39 @@ body{
                 text-decoration: none;
                 box-sizing: border-box;
                 &:hover{
-                    @include hoverEffect($primary-color,$font-color,pointer)
+                    @include hoverEffect($primary-color,$font-color,pointer,$font-color)
                 }
+            }
+        }
+        .fetch-api{
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 20px;
+            @include styleBox(0 0 30px 0, 20px,transparent,none,none);
+            .photoItem{
+                box-sizing: border-box;
+                overflow: hidden;
+                width: 400px;
+                height: 200px;
+                padding: 0;
+                @include styleBox(0,0,$secondary-bg-color,none,10px);
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    @include hoverEffect($font-color,$secondary-bg-color,pointer,$shadow-color);
+                }
+
+                img{
+                    object-fit: cover;
+                    max-width: 300px;
+                    max-width: 200px;
+                    height: 100%;
+                    width: 100%;
+                }
+                
+
             }
         }
 
@@ -101,7 +132,7 @@ body{
                     align-self: center;
                     transition: all 0.3s ease-in-out;
                     &:hover{
-                        @include hoverEffect($primary-color,$font-color,pointer);
+                        @include hoverEffect($primary-color,$font-color,pointer,$font-color);
                     }
                 }
             }

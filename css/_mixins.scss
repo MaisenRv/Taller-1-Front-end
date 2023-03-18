@@ -12,11 +12,11 @@
     border-radius: $radiusBorder;
 }
 
-@mixin hoverEffect($color,$bg-color,$cursor){
+@mixin hoverEffect($color,$bg-color,$cursor,$shadow-color){
     color: $color;
     background-color: $bg-color;
     cursor: $cursor;
-    box-shadow: 3px 1px 10px $bg-color;
+    box-shadow: 3px 1px 10px $shadow-color;
     transition: all 0.3s ease-in-out;
 }
 
