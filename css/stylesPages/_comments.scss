@@ -1,0 +1,38 @@
+.comments{
+    box-shadow: 1px 1px 8px $shadow-color;
+    @include styleBox(15px,20px,$secondary-bg-color,none,15px);
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        input[type="text"] {
+            @include styleInput();
+            transition: all 0.3s ease-in-out;
+            &:focus{
+                transition: all 0.3s ease-in-out;
+                background-color: transparent;
+                border-bottom: 2px solid $primary-color;
+            }
+        }
+
+        textarea{
+            @include styleInput();
+            resize: none;
+            transition: all 0.3s ease-in-out;
+            &:focus{
+                transition: all 0.3s ease-in-out;
+                background-color: transparent;
+                border-bottom: 2px solid $primary-color;
+            }
+        }
+        input[type="submit"]{
+            @include styleButton(8px 10px,0);
+            width: 50%;
+            align-self: center;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                @include hoverEffect($primary-color,$font-color,pointer,$font-color);
+            }
+        }
+    }
+}

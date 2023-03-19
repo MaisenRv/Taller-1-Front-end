@@ -1,0 +1,23 @@
+.home{
+    @include styleBox(15px,20px,$secondary-bg-color,none,15px);
+    width: 50%;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 8px $shadow-color;
+    h2{
+        margin: 0;
+        @include styleText($font-color,x-large,500);
+    }
+    p{
+        @include styleText($font-color,medium,300);
+    }
+    a{
+        @include styleButton(8px 10px,0);
+        @include styleText($font-color,15px,400);
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        box-sizing: border-box;
+        &:hover{
+            @include hoverEffect($primary-color,$font-color,pointer,$font-color)
+        }
+    }
+}

@@ -1,6 +1,10 @@
 @import "variables";
 @import "mixins";
 
+@import "stylesPages/home";
+@import "stylesPages/fetch-api";
+@import "stylesPages/comments";
+
 *{
     font-family: $font-family;
     
@@ -43,102 +47,8 @@ body{
 
     main{
         display: flex;
-        justify-content: center;
-        .home{
-            @include styleBox(15px,20px,$secondary-bg-color,none,15px);
-            width: 50%;
-            box-sizing: border-box;
-            box-shadow: 1px 1px 8px $shadow-color;
-            h2{
-                margin: 0;
-                @include styleText($font-color,x-large,500);
-            }
-            p{
-                @include styleText($font-color,medium,300);
-            }
-            a{
-                @include styleButton(8px 10px,0);
-                @include styleText($font-color,15px,400);
-                transition: all 0.3s ease-in-out;
-                text-decoration: none;
-                box-sizing: border-box;
-                &:hover{
-                    @include hoverEffect($primary-color,$font-color,pointer,$font-color)
-                }
-            }
-        }
-        .fetch-api{
-            width: 70%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            gap: 20px;
-            @include styleBox(0 0 30px 0, 20px,transparent,none,none);
-            .photoItem{
-                box-sizing: border-box;
-                overflow: hidden;
-                width: 400px;
-                height: 200px;
-                padding: 0;
-                @include styleBox(0,0,$secondary-bg-color,none,10px);
-                transition: all 0.3s ease-in-out;
-                &:hover{
-                    @include hoverEffect($font-color,$secondary-bg-color,pointer,$shadow-color);
-                }
-
-                img{
-                    object-fit: cover;
-                    max-width: 300px;
-                    max-width: 200px;
-                    height: 100%;
-                    width: 100%;
-                }
-                
-
-            }
-        }
-
-        .comments{
-            box-shadow: 1px 1px 8px $shadow-color;
-            @include styleBox(15px,20px,$secondary-bg-color,none,15px);
-            form{
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-                input[type="text"] {
-                    @include styleInput();
-                    transition: all 0.3s ease-in-out;
-                    &:focus{
-                        transition: all 0.3s ease-in-out;
-                        background-color: transparent;
-                        border-bottom: 2px solid $primary-color;
-                    }
-                }
-
-                textarea{
-                    @include styleInput();
-                    resize: none;
-                    transition: all 0.3s ease-in-out;
-                    &:focus{
-                        transition: all 0.3s ease-in-out;
-                        background-color: transparent;
-                        border-bottom: 2px solid $primary-color;
-                    }
-                }
-                input[type="submit"]{
-                    @include styleButton(8px 10px,0);
-                    width: 50%;
-                    align-self: center;
-                    transition: all 0.3s ease-in-out;
-                    &:hover{
-                        @include hoverEffect($primary-color,$font-color,pointer,$font-color);
-                    }
-                }
-            }
-        }
+        justify-content: center;    
     }
-
 
     footer{
         display: flex;
