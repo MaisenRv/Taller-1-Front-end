@@ -1,9 +1,6 @@
 @import "variables";
 @import "mixins";
 
-@import "stylesPages/home";
-@import "stylesPages/fetch-api";
-@import "stylesPages/comments";
 
 *{
     font-family: $font-family;
@@ -45,9 +42,16 @@ body{
         }
     }
 
+    main.fetch-main{
+        display: flex;
+        flex-direction: column;
+        @import "stylesPages/fetch-api";
+    }
     main{
         display: flex;
-        justify-content: center;    
+        justify-content: center;
+        @import "stylesPages/home";
+        @import "stylesPages/comments";    
     }
 
     footer{

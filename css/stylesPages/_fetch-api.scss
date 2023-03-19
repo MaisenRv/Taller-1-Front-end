@@ -1,4 +1,48 @@
+.search-bar{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    @include styleBox(20px 0 0 0,0,transparent,none,none);
+    
+    div.searching-focus{
+        @include hoverEffect($font-color,$primary-color,default,$shadow-color);
+    }
+
+    div{
+        display: flex;
+        height: 30px;
+        width: 40%;
+        @include styleBox(0,3px 5px,transparent,1px solid $primary-color,10px);
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            @include hoverEffect($font-color,$primary-color,default,$shadow-color);
+        }
+
+        label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 30px;
+                height: 30px;
+            }
+        }
+        input{
+            outline: none;
+            border: none;
+            width: 100%;
+            background-color: transparent;
+            @include styleText($font-color,medium,300);
+            &::placeholder{
+                color: $font-color;
+            }
+        }
+    }
+}
+
 .fetch-api{
+    box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-direction: row;
