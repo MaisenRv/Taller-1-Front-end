@@ -299,6 +299,56 @@ body main .comments form input[type=submit]:hover {
   box-shadow: 3px 1px 10px #202124;
   transition: all 0.3s ease-in-out;
 }
+body main .comments-list {
+  margin: 15px;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  border-radius: none;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 10px;
+  overflow-y: auto;
+  max-width: 500px;
+  max-height: 380px;
+  box-sizing: border-box;
+}
+body main .comments-list .comment {
+  margin: 0;
+  padding: 10px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+body main .comments-list .comment h4 {
+  margin: 0;
+  color: #202124;
+  font-size: medium;
+  font-weight: 700;
+}
+body main .comments-list .comment p {
+  margin: 0;
+  color: #202124;
+  font-size: small;
+  font-weight: 400;
+}
+body main .comments-list .comment span {
+  color: #202124;
+  font-size: x-small;
+  font-weight: 300;
+  text-align: right;
+}
+body main .comments-list .comment:hover {
+  color: #202124;
+  background-color: #ffffff;
+  cursor: default;
+  box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
 body footer {
   display: flex;
   align-items: center;

@@ -20,7 +20,7 @@
     </header>
     <main>
         <section class="comments">
-            <form action="">
+            <form id="comment-form">
                 <label for="user-name">Nombre</label>
                 <input type="text" name="user-name" id="user-name">
                 <label for="comment">Comentario</label>
@@ -28,9 +28,19 @@
                 <input type="submit" value="Enviar">
             </form>
         </section>
+        <aside class="comments-list" id="commentsList">
+            <div class="comment">
+                <h4>nombre</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem impedit maiores ipsa velit autem adipisci qui eum est nostrum non? Officiis expedita aliquam doloremque ex, dicta sapiente ipsa! Delectus, ut?</p>
+                <span>fecha</span>
+            </div>
+        </aside>
     </main>
     <footer>
         <span>Todos a la U - Santiago Mancera</span>
     </footer>
 </body>
+<script src="js/Comment.js"></script>
+<script src="js/events.js"></script>
+<script src="js/index.js"></script>
 </html>

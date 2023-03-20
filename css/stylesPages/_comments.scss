@@ -36,3 +36,37 @@
         }
     }
 }
+
+.comments-list{
+    @include styleBox(15px,10px,transparent,none,none);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    gap: 10px;
+    overflow-y: auto;
+    max-width: 500px;
+    max-height: 380px;
+    box-sizing: border-box;
+    .comment{
+        @include styleBox(0,10px,$secondary-bg-color,none,10px);
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease-in-out;
+        h4{
+            margin: 0;
+            @include styleText($font-color,medium,700)
+        }
+        p{
+            margin: 0;
+            @include styleText($font-color,small,400);
+        }
+        span{
+            @include styleText($font-color,x-small,300);
+            text-align: right;
+        }
+
+        &:hover{
+            @include hoverEffect($font-color,$secondary-bg-color,default,$shadow-color)
+        }
+    }
+}
