@@ -7,5 +7,6 @@ window.addEventListener("keypress",(e)=>{
     if (e.key == "Enter" && searchBar.value != "") {
         clearSectionImages()
         printInformation(searchByText(searchBar.value).then(result=>result.results))
+        searchBar.value = ""
     }
 })
