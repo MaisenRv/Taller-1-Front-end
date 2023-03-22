@@ -306,10 +306,9 @@ body main .comments-list {
   border: none;
   border-radius: none;
   display: flex;
-  flex-direction: column-reverse;
-  justify-content: flex-end;
-  gap: 10px;
+  flex-direction: column;
   overflow-y: auto;
+  gap: 10px;
   max-width: 500px;
   max-height: 380px;
   box-sizing: border-box;
@@ -336,11 +335,41 @@ body main .comments-list .comment p {
   font-size: small;
   font-weight: 400;
 }
-body main .comments-list .comment span {
+body main .comments-list .comment .comment-footer {
+  display: flex;
+  justify-content: space-between;
+}
+body main .comments-list .comment .comment-footer .actions-btns {
+  display: flex;
+  gap: 5px;
+}
+body main .comments-list .comment .comment-footer .actions-btns button {
+  margin: 0 5px;
+  color: #202124;
+  font-size: 11px;
+  font-weight: 400;
+  background-color: #55CBCD;
+  border: none;
+  border-radius: 7px;
+  padding: 2px 5px;
+  margin: 0;
+  font-weight: 400;
+}
+body main .comments-list .comment .comment-footer .actions-btns button:hover {
+  color: #202124;
+  background-color: none;
+  cursor: pointer;
+  box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+body main .comments-list .comment .comment-footer .actions-btns .btn-delete {
+  background-color: tomato;
+}
+body main .comments-list .comment .comment-footer span {
   color: #202124;
   font-size: x-small;
   font-weight: 300;
-  text-align: right;
+  align-self: flex-end;
 }
 body main .comments-list .comment:hover {
   color: #202124;

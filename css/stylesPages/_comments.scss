@@ -40,10 +40,9 @@
 .comments-list{
     @include styleBox(15px,10px,transparent,none,none);
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
-    gap: 10px;
+    flex-direction: column;
     overflow-y: auto;
+    gap: 10px;
     max-width: 500px;
     max-height: 380px;
     box-sizing: border-box;
@@ -60,10 +59,36 @@
             margin: 0;
             @include styleText($font-color,small,400);
         }
-        span{
-            @include styleText($font-color,x-small,300);
-            text-align: right;
+
+        .comment-footer{
+            display: flex;
+            justify-content: space-between;
+
+            .actions-btns{
+                display: flex;
+                gap: 5px;
+                button{
+                    margin: 0 5px;
+                    @include styleText($font-color,11px,400);
+                    @include styleButton(2px 5px,0);
+
+                    &:hover{
+                        @include hoverEffect($font-color,none,pointer,$shadow-color)
+                    }
+                }
+                .btn-delete{
+                    background-color: tomato;   
+                }
+            }
+            span{
+                @include styleText($font-color,x-small,300);
+                align-self: flex-end;
+            }
+
+        
+
         }
+
 
         &:hover{
             @include hoverEffect($font-color,$secondary-bg-color,default,$shadow-color)
