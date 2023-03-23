@@ -41,14 +41,17 @@
     @include styleBox(15px,10px,transparent,none,none);
     display: flex;
     flex-direction: column;
+    // flex-flow: column;
     overflow-y: auto;
     gap: 10px;
     max-width: 500px;
+    // min-width: 200px;
     max-height: 380px;
     box-sizing: border-box;
     .comment{
         @include styleBox(0,10px,$secondary-bg-color,none,10px);
         display: flex;
+        min-width: 250px;
         flex-direction: column;
         transition: all 0.3s ease-in-out;
         h4{
@@ -58,6 +61,7 @@
         p{
             margin: 0;
             @include styleText($font-color,small,400);
+            margin-bottom: 5px;
         }
 
         .comment-footer{

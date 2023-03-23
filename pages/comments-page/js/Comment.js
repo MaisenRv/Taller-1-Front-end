@@ -10,7 +10,6 @@ class Comment{
         this.#id = id
     }
 
-
     createComment(){
 
         const userName = document.createElement("h4")
@@ -21,7 +20,7 @@ class Comment{
 
         const date = document.createElement("span")
         date.textContent = this.#formatDate()
-        
+
         const commentFooterDiv = document.createElement("div")
         commentFooterDiv.classList = "comment-footer"
         commentFooterDiv.append(this.#createButtons(),date)
@@ -39,8 +38,12 @@ class Comment{
         commentList.removeChild(document.getElementById(id))
     }
 
-    #editComment(id){
-
+    #editComment(id,user,comment){
+        const inputUserName = document.getElementById("user-name")
+        const inputComment = document.getElementById("comment")
+        inputUserName.value = user
+        inputComment.value = comment
+        this.#deleteComment(id)
     }
 
     #createButtons(){
@@ -54,7 +57,9 @@ class Comment{
         buttonEdit.classList = "btn-edit"
         buttonEdit.id = "buttonEdit"
         buttonEdit.textContent = "Editar"
-        buttonEdit.addEventListener("click",()=>{this.#editComment(this.#id)})
+        buttonEdit.addEventListener("click",()=>{
+            this.#editComment(this.#id,this.#user,this.#comment)
+        })
 
         const actionsButtonsDiv = document.createElement("div")
         actionsButtonsDiv.classList = "actions-btns"

@@ -10,7 +10,8 @@ commentForm.addEventListener("submit",(e)=>{
         const comment = new Comment(userName.value,commentContent.value,idNumberComment);
         // localStorage.setItem("comment",comment.createComment())
         addCommentToList(comment.createComment())
-        
+        userName.value = ""
+        commentContent.value = ""
         idNumberComment++
     }
 })
